@@ -19,6 +19,7 @@ import os
 import random
 # 導入 gear 模組
 import gear
+import man
 
 ################# (2) 廣域變數設定區
 # 確定程式檔案所在目錄, 在 Windows 下有最後的反斜線
@@ -94,6 +95,8 @@ class Hello(object):
     <h2>賴仁華</h2>
 
     <a href="drawspur">drawgear2</a>(繪出兩顆齒輪)<br />
+    <a href="man">man</a>(lego)<br />
+
 
        
     '''
@@ -963,6 +966,8 @@ application_conf = {'/static':{
     
 root = Hello()
 root.gear = gear.Gear()
+root.man = man.MAN()
+
 cherrypy.server.socket_port = 8081
 cherrypy.server.socket_host = '127.0.0.1'
 
